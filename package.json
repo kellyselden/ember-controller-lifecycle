@@ -1,6 +1,6 @@
 {
   "name": "ember-controller-lifecycle",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Add route lifecycle hooks to a route's controller",
   "keywords": [
     "ember-addon"
