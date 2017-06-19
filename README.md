@@ -19,23 +19,10 @@ export default Ember.Controller.extend({
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-controller-lifecycle`
-* `npm install`
+```sh
+ember install ember-controller-lifecycle
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+The hooks are automatically installed into every controller.
