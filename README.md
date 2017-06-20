@@ -59,8 +59,6 @@ ember install ember-controller-lifecycle
 
 ## Usage
 
-The hooks are automatically installed into every controller.
-
 ```js
 import Ember from 'ember';
 
@@ -69,7 +67,9 @@ export default Ember.Controller.extend({
   setupController(model) {
   },
   // https://www.emberjs.com/api/classes/Ember.Route.html#method_resetController
-  resetController(isExiting, transition) {
+  resetController(isExiting) {
   }
 });
 ```
+
+The hooks are automatically installed into every controller.
