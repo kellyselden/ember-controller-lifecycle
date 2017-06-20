@@ -10,13 +10,13 @@ export function initialize() {
       }
     },
     deactivate() {
-      this._super(...arguments);
-
       let { controller } = this;
 
       if (controller.deactivate) {
         controller.deactivate();
       }
+
+      this._super(...arguments);
     }
   });
 }
