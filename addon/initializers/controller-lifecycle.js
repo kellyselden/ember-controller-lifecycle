@@ -5,15 +5,15 @@ export function initialize() {
     setupController(controller, ...args) {
       this._super(...arguments);
 
-      if (controller.setupController) {
-        controller.setupController(...args);
+      if (controller.setup) {
+        controller.setup(...args);
       }
     },
     resetController(controller, ...args) {
       this._super(...arguments);
 
-      if (controller.resetController) {
-        controller.resetController(...args);
+      if (controller.reset) {
+        controller.reset(...args);
       }
     }
   });

@@ -64,10 +64,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   // https://www.emberjs.com/api/classes/Ember.Route.html#method_setupController
-  setupController(model) {
+  setup(model) {
   },
   // https://www.emberjs.com/api/classes/Ember.Route.html#method_resetController
-  resetController(isExiting, transition) {
+  reset(isExiting, transition) {
   }
 });
 ```
