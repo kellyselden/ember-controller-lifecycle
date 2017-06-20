@@ -2,21 +2,19 @@ import Route from 'ember-route';
 
 export function initialize() {
   Route.reopen({
-    setupController(controller, model) {
+    setupController(controller, ...args) {
       this._super(...arguments);
 
       if (controller.setupController) {
-        controller.setupController(model);
+        controller.setupController(...args);
       }
     },
-    deactivate() {
-      let { controller } = this;
-
-      if (controller.deactivate) {
-        controller.deactivate();
-      }
-
+    resetController(controller, ...args) {
       this._super(...arguments);
+
+      if (controller.resetController) {
+        controller.resetController(...args);
+      }
     }
   });
 }
