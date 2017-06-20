@@ -66,6 +66,7 @@ export default Ember.Controller.extend({
   // https://www.emberjs.com/api/classes/Ember.Route.html#method_setupController
   setup(model) {
   },
+
   // https://www.emberjs.com/api/classes/Ember.Route.html#method_resetController
   reset(isExiting, transition) {
   }
