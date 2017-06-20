@@ -7,16 +7,49 @@
 
 Add route lifecycle hooks to a route's controller
 
+## Motivation
+
+If you want to reset state on your controller, you must override route hooks/events like so:
+
+```js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  setupController(controller) {
+    this._super(...arguments);
+
+    controller.set('foo', null);
+    controller.set('bar', Ember.A());
+  }
+});
+```
+
+This couples a controller's private state to its route's code. You might then create a convention where you put controller setup code in its own function that you call from the route:
+
+```js
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  setupController(controller) {
+    this._super(...arguments);
+
+    controller.setup();
+  }
+});
+```
+
 ```js
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  setupController(model) {
-  },
-  deactivate() {
+  setup() {
+    this.set('foo', null);
+    this.set('bar', Ember.A());
   }
 });
 ```
+
+This addon functions the same way, it just eliminates the boilerplate by calling the hooks automatically.
 
 ## Installation
 
@@ -27,3 +60,14 @@ ember install ember-controller-lifecycle
 ## Usage
 
 The hooks are automatically installed into every controller.
+
+```js
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+  setupController(model) {
+  },
+  deactivate() {
+  }
+});
+```
