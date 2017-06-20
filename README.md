@@ -65,8 +65,10 @@ The hooks are automatically installed into every controller.
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  // https://www.emberjs.com/api/classes/Ember.Route.html#method_setupController
   setupController(model) {
   },
+  // https://www.emberjs.com/api/classes/Ember.Route.html#method_resetController
   resetController(isExiting, transition) {
   }
 });
