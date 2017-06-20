@@ -6,8 +6,8 @@ export default Ember.Controller.extend({
   setupController(model) {
     this.setProperties(model);
   },
-  resetController(isExiting) {
-    if (isExiting) {
+  resetController(isExiting, transition) {
+    if (isExiting && transition.targetName === 'foo') {
       this.set('bar.foo', 'bar');
     }
   }
