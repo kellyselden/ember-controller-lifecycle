@@ -67,7 +67,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   setupController(model) {
   },
-  deactivate() {
+  resetController(isExiting, transition) {
   }
 });
 ```

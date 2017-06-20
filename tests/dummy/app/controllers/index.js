@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   setupController(model) {
     this.setProperties(model);
   },
-  deactivate() {
+  resetController() {
     this.set('bar.foo', 'bar');
   }
 });
