@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export function initialize() {
+export function initialize(/* application */) {
   Route.reopen({
     setupController(controller, ...args) {
       this._super(...arguments);
@@ -20,6 +20,5 @@ export function initialize() {
 }
 
 export default {
-  name: 'controller-lifecycle',
   initialize
 };
