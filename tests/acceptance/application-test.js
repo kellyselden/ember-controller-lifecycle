@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, find } from '@ember/test-helpers';
+import { visit } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
 module('Acceptance | application', function(hooks) {
@@ -8,10 +8,10 @@ module('Acceptance | application', function(hooks) {
   test('visiting /', async function(assert) {
     await visit('/');
 
-    assert.equal(find('*').textContent, 'bar');
+    assert.dom('*').hasText('bar');
 
     await visit('/foo');
 
-    assert.equal(find('*').textContent, 'bar');
+    assert.dom('*').hasText('bar');
   });
 });
